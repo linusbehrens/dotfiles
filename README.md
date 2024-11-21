@@ -1,5 +1,5 @@
 # dotfiles
 
 ```bash
-ln -s ~/dotfiles/weechat ~/.config/weechat
+bash init.bash
 ```
