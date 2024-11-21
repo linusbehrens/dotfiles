@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Array mit den Namen der Repositories im Home-Verzeichnis
+repos=("school" "writing" "obsidian" "sync" "dotfiles")
+
+# Funktion zum Synchronisieren eines einzelnen Repositories
+sync_repo() {
+    local repo_path="$1"
+    local commit_message="$2"
+
+    echo "Synchronizing repository: $repo_path"
+
+    # Wechsle ins Repository-Verzeichnis
+    cd "$repo_path" || { echo "Failed to access $repo_path"; return 1; }
+
+    # Pull vom Remote-Repository
+    git pull
+
+    # Alle Änderungen hinzufügen
+    git add -A
+
+    # Änderungen committen
+    git commit -m "$commit_message"
+
+    # Änderungen pushen
+    git push
+
+    # Zurück ins ursprüngliche Verzeichnis
+    cd - > /dev/null
+}
+
+# Standard-Commit-Nachricht
+commit_message="exec"
+
+# Wenn ein Argument übergeben wurde, verwende es als Commit-Nachricht
+if [ "$#" -eq 1 ]; then
+    commit_message=$1
+fi
+
+# Wenn das Skript im Home-Verzeichnis (~) ausgeführt wird
+if [ "$PWD" == "$HOME" ]; then
+    # Durchlaufe alle Repositories im Array
+    for repo in "${repos[@]}"; do
+        repo_path="$HOME/$repo"
+        if [ -d "$repo_path/.git" ]; then
+            sync_repo "$repo_path" "$commit_message"
+        else
+            echo "Directory $repo_path is not a git repository."
+        fi
+    done
+else
+    # Wenn das Skript nicht im Home-Verzeichnis ausgeführt wird, synchronisiere nur das aktuelle Verzeichnis
+    sync_repo "$PWD" "$commit_message"
+fi
+
