@@ -9,3 +9,6 @@ ln -s ~/dotfiles/.sources/ ~/.sources
 
 rm -rf ~/.scripts
 ln -s ~/dotfiles/.scripts/ ~/.scripts
+
+rm -rf $HOME/Library/Application Support/com.mitchellh.ghostty
+ln -s $HOME/dotfiles/ghostty/ $HOME/Library/Application Support/com.mitchellh.ghostty
