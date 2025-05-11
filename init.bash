@@ -11,4 +11,8 @@ rm -rf ~/.scripts
 ln -s ~/dotfiles/.scripts/ ~/.scripts
 
 rm -rf $HOME/Library/Application Support/com.mitchellh.ghostty
-ln -s $HOME/dotfiles/ghostty/ $HOME/Library/Application Support/com.mitchellh.ghostty
+rm -rf $HOME/.config/ghostty
+ln -s $HOME/dotfiles/ghostty/ $HOME/.config/
+
+rm -rf $HOME/.config/yazi
+ln -s $HOME/dotfiles/yazi/ $HOME/.config/
