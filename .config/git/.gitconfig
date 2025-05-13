@@ -1,0 +1,6 @@
+[user]
+	name = KoenigLinus
+	email = linus@behrens-familie.de
+	signingkey = 3DD5F84CD72A09D6
+[commit]
+	gpgsign = true
