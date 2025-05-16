@@ -6,6 +6,8 @@ vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", 			{ desc = "write file" }, {
 
 vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<cr>", 				{ desc = "NoNeckPain: zen" })
 vim.keymap.set("n", "<leader>h", "<cmd>TransparentToggle<cr>", 			{ desc = "Transparency: toggle" })
+vim.keymap.set("n", "<leader>u", ":ZenMode <CR>", { silent = true })
+
 --
 --
 --
