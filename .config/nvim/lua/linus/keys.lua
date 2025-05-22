@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>q", ":q<CR>", 				{ desc = "quit neovim" })
+vim.keymap.set('n', 's', 'l', { noremap = true }) -- t → rechts
 vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", 			{ desc = "write file" }, { silent = true })
 
 -- local map = LazyVim.safe_keymap_set
@@ -8,7 +8,11 @@ vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<cr>", 				{ desc = "NoNeckPain
 vim.keymap.set("n", "<leader>h", "<cmd>TransparentToggle<cr>", 			{ desc = "Transparency: toggle" })
 vim.keymap.set("n", "<leader>u", ":ZenMode <CR>", { silent = true })
 
---
+-- Setze die Navigationstasten auf die Bone-Positionen der ursprünglichen HJKL-Tasten
+
+vim.cmd("set langmap=bh,nj,rk,sl,mb,lr")
+
+-- ----x
 --
 --
 --

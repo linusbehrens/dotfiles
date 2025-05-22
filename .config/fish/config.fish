@@ -23,6 +23,7 @@ alias bi='brew install'
 
 alias v='nvim'
 alias n='neofetch'
+alias y='yazi'
 alias g='cage ghostty'
 alias gx='pkill cage'
 
