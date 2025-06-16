@@ -1,53 +1,54 @@
+
 return {
-  "echasnovski/mini.starter",
-  version = false, -- until 0.7.0 release
-  event = "VimEnter",
-  opts = function()
-    local logo = table.concat({
-      "neovim",
-    }, "\n")
-    local pad = string.rep(" ", 1)
-    local new_section = function(name, action, section)
-      return { name = name, action = action, section = pad .. section }
-    end
-
-    local starter = require("mini.starter")
-    local config = {
-      evaluate_single = true,
-      header = logo,
-      footer = "",
-      items = {
-        new_section("file search",  function() vim.cmd("Telescope find_files") end,     "Files"),
-        new_section("text search",  function() vim.cmd("Telescope live_grep") end,      "Files"),
-        new_section("recent files", function() vim.cmd("Telescope oldfiles") end,       "Files"),
-        new_section("config",       function() vim.cmd("e $MYVIMRC") end,               "Config"),
-        new_section("lazy",         function() vim.cmd("Lazy") end,                     "Config"),
-        new_section("restore session", function() require("persistence").load() end,    "System"),
-        new_section("new file",     function() vim.cmd("ene | startinsert") end,        "System"),
-        new_section("quit",         function() vim.cmd("q") end,                        "System"),
-      },
-      content_hooks = {
-        starter.gen_hook.adding_bullet(pad .. "░ ", false),
-        starter.gen_hook.aligning("center", "center"),
-      },
-    }
-    return config
-  end,
-
-  config = function(_, config)
-    local starter = require("mini.starter")
-    starter.setup(config)
-
-    vim.api.nvim_create_autocmd("User", {
-      pattern = "VimEnter",
-      callback = function()
-        local plugin_count = #vim.tbl_keys(require("lazy.core.config").plugins or {})
-        local ms = vim.g.startuptime or 0
-        local pad_footer = string.rep(" ", 8)
-        starter.config.footer = pad_footer .. "Neovim loaded " .. plugin_count .. " plugins"
-        pcall(starter.refresh, config)
-      end,
-    })
-  end,
+--   "echasnovski/mini.starter",
+--   version = false, -- until 0.7.0 release
+--   event = "VimEnter",
+--   opts = function()
+--     local logo = table.concat({
+--       "neovim",
+--     }, "\n")
+--     local pad = string.rep(" ", 1)
+--     local new_section = function(name, action, section)
+--       return { name = name, action = action, section = pad .. section }
+--     end
+--
+--     local starter = require("mini.starter")
+--     local config = {
+--       evaluate_single = true,
+--       header = logo,
+--       footer = "",
+--       items = {
+--         new_section("file search",  function() vim.cmd("Telescope find_files") end,     "Files"),
+--         new_section("text search",  function() vim.cmd("Telescope live_grep") end,      "Files"),
+--         new_section("recent files", function() vim.cmd("Telescope oldfiles") end,       "Files"),
+--         new_section("config",       function() vim.cmd("e $MYVIMRC") end,               "Config"),
+--         new_section("lazy",         function() vim.cmd("Lazy") end,                     "Config"),
+--         new_section("restore session", function() require("persistence").load() end,    "System"),
+--         new_section("new file",     function() vim.cmd("ene | startinsert") end,        "System"),
+--         new_section("quit",         function() vim.cmd("q") end,                        "System"),
+--       },
+--       content_hooks = {
+--         starter.gen_hook.adding_bullet(pad .. "░ ", false),
+--         starter.gen_hook.aligning("center", "center"),
+--       },
+--     }
+--     return config
+--   end,
+--
+--   config = function(_, config)
+--     local starter = require("mini.starter")
+--     starter.setup(config)
+--
+--     vim.api.nvim_create_autocmd("User", {
+--       pattern = "VimEnter",
+--       callback = function()
+--         local plugin_count = #vim.tbl_keys(require("lazy.core.config").plugins or {})
+--         local ms = vim.g.startuptime or 0
+--         local pad_footer = string.rep(" ", 8)
+--         starter.config.footer = pad_footer .. "Neovim loaded " .. plugin_count .. " plugins"
+--         pcall(starter.refresh, config)
+--       end,
+--     })
+--   end,
 }
-
+--

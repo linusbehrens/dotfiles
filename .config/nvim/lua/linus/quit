@@ -1,0 +1,18 @@
+vim.g.mapleader = " "
+
+-- local map = LazyVim.safe_keymap_set
+
+vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<cr>", 				{ desc = "NoNeckPain: zen" })
+vim.keymap.set("n", "<leader>h", "<cmd>TransparentToggle<cr>", 			{ desc = "Transparency: toggle" })
+vim.keymap.set("n", "<leader>u", ":ZenMode <CR>", { silent = true })
+
+-- Setze die Navigationstasten auf die Bone-Positionen der ursprünglichen HJKL-Tasten
+
+vim.cmd("set langmap=bh,nj,rk,sl,mb,lr")
+
+
+vim.keymap.set("n", "<leader>w", "<cmd>write<cr>", 			{ desc = "write file" }, { silent = true })
+vim.keymap.set("n", "<leader>qq", "<cmd>quit<cr>", 		    { desc = "quit" })
+vim.keymap.set("n", "<leader>qw", "<cmd>write quit<cr>", 		    { desc = "quit" })
+vim.keymap.set("n", "<leader>r", "<cmd>redo<cr>", 		    { desc = "redo" })
+vim.keymap.set("n", "<leader><cr>", "<cmd>", 		    { desc = "cmd mode" })

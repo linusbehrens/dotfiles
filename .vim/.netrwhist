@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/linus/.vim/colors'
+let g:netrw_dirhist_2='/Users/linus/tmp'
+let g:netrw_dirhist_1='/opt/homebrew/Cellar/libgit2/1.9.0/include/git2'

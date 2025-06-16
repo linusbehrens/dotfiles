@@ -1,27 +1,18 @@
+-- leader key auf space
 vim.g.mapleader = " "
-vim.keymap.set('n', 's', 'l', { noremap = true }) -- t → rechts
-vim.keymap.set("n", "<leader>w", "<CMD>write<CR>", 			{ desc = "write file" }, { silent = true })
-
--- local map = LazyVim.safe_keymap_set
-
-vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<cr>", 				{ desc = "NoNeckPain: zen" })
-vim.keymap.set("n", "<leader>h", "<cmd>TransparentToggle<cr>", 			{ desc = "Transparency: toggle" })
-vim.keymap.set("n", "<leader>u", ":ZenMode <CR>", { silent = true })
 
 -- Setze die Navigationstasten auf die Bone-Positionen der ursprünglichen HJKL-Tasten
+-- vim.cmd("set langmap=bh,nj,rk,sl,mb,lr")
 
-vim.cmd("set langmap=bh,nj,rk,sl,mb,lr")
+vim.keymap.set("n", "<leader>eu", ":ZenMode <CR>",           { desc = "zen mode" }, { silent = true })
+vim.keymap.set("n", "<leader>ee", "<cmd>Neotree toggle float<CR>", { desc = "neotree toggle" }, { silent = true })
+vim.keymap.set("n", "<leader>eE", "<cmd>Neotree focus float<CR>", { desc = "neotree focus" }, { silent = true })
 
--- ----x
---
---
---
--- vim.keymap.set("<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", 	{ desc = "Document Diagnostics (Trouble)" })
--- vim.keymap.set("<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<cr>", 	{ desc = "Workspace Diagnostics (Trouble)" })
--- vim.keymap.set("<leader>xL", "<cmd>TroubleToggle loclist<cr>", 			{ desc = "Open Location List (Trouble)" })
--- vim.keymap.set("<leader>xQ", "<cmd>TroubleToggle quickfix<cr>",  			{ desc = "Open Quickfix List (Trouble)" })
--- vim.keymap.set("gr", "<cmd>TroubleToggle lsp_references<cr>", 			{ desc = "LSP References (Trouble)" })
---
---
---
---
+vim.keymap.set("n", "<leader>qw", "<cmd>write<cr>", 		{ desc = "write" }, { silent = true })
+vim.keymap.set("n", "<leader>qq", "<cmd>quit<cr>", 		    { desc = "quit" })
+vim.keymap.set("n", "<leader>qg", "<cmd>wq<cr>", 		    { desc = "write and quit" })
+
+vim.keymap.set("n", "<leader>r", "<cmd>redo<cr>", 		    { desc = "redo" })
+vim.keymap.set("n", "<leader>,", ":", 		                { desc = "cmd mode" })
+
+

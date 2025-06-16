@@ -9,10 +9,6 @@ return {
       "nvim-tree/nvim-web-devicons",  -- file icons
       "MunifTanjim/nui.nvim",
     },
-    keys = {
-      { "<leader>e", "<cmd>Neotree toggle float<cr>", desc = "Toggle File Explorer (Float)" },
-      { "<leader>E", "<cmd>Neotree focus float<cr>", desc = "Focus File Explorer" },
-    },
     opts = {
       filesystem = {
         follow_current_file = true,  -- sync tree with open file
