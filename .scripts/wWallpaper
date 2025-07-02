@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+# $(ls -1 $HOME/dotfiles/wallpaper | wmenu -i)
+ls -1 -R $HOME/dotfiles/wallpaper | wmenu -i -l 10
+
+

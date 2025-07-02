@@ -1,0 +1,21 @@
+#!/bin/bash
+
+awk -F, '{
+  if ($2 != "") {
+    print $2
+  } else {
+    print $1
+  }
+}' $HOME/scripts/websites.csv | wmenu -i -l 10 | while read selection; do
+  if [ -z "$selection" ]; then
+    exit 0
+  fi
+  awk -F, -v sel="$selection" '
+    $2 == sel { print $1; found=1 }
+    $2 == "" && $1 == sel { print $1; found=1 }
+    END { if (!found) exit 1 }
+  ' $HOME/scripts/websites.csv | while read url; do
+    xdg-open "$url" >/dev/null 2>&1 &
+  done
+done
+

@@ -1,0 +1,3 @@
+Starlink-Wohn,starLink#1419
+iPhone Linus,lulatsch
+nmcli connection add type wifi con-name "SchuleGYM" ssid "SchuleGYM" autoconnect yes wifi-sec.key-mgmt wpa-eap 802-1x.eap peap 802-1x.identity "linus.behre" 802-1x.password "DTH76: )WLAN" 802-1x.phase2-autheap mschapv2,SchuleGYM

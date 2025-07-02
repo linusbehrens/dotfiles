@@ -1,0 +1,19 @@
+#!/bin/bash
+
+(
+  echo "$(brightnessctl g) (current brightness)"
+  for b in 500 400 300 200 100 49 29 9 off; do
+    echo "$b"
+  done
+) | wmenu -i -l 9 | awk '{print $1}' | while read bri; do
+  if [ "$bri" = "off" ]; then
+    brightnessctl s 0
+  else
+    brightnessctl s "$bri"
+  fi
+done
+
+
+
+
+

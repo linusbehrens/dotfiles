@@ -1,0 +1,18 @@
+#!/bin/bash
+
+(
+  #echo "$(pamixer --get-volume) (current volume)"
+  for v in 100 80 60 40 20 mute; do
+    echo "$v"
+  done
+  ) | wmenu -i -l 6 -p $(pamixer --get-volume) | awk '{print $1}' | while read vol; do
+  if [ "$vol" = "mute" ]; then
+    pamixer --mute
+  else
+    pamixer --set-volume "$vol"
+  fi
+done
+
+
+
+

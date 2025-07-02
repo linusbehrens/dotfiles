@@ -18,11 +18,17 @@ set shiftwidth=4
 " Leader
 
 let mapleader=" "
+
 nnoremap <leader>s :w<CR>		
+
 "write
+
 nnoremap <leader>q :q<CR>		
+
 "quit
+
 nnoremap <leader>g :wq<CR>	
+
 "write and quit
 
 autocmd vimenter * colorscheme vague	"color theme
