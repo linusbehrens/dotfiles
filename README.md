@@ -3,10 +3,13 @@
 ## Inhalt
 
 - `.bashrc`
-- `.config/nvim`
-- `.config/weechat`
-- `.scripts/ghsync`
-- `.sources/*`
+- `.bash_profile`
+- `.vimrc`
+- `.zshenv`
+- `.vim/`
+- `.config/`
+- `.sources/`
+- `.scripts/`
 
 ## Initialisierung
 
