@@ -1,0 +1,21 @@
+#!/bin/bash
+
+awk -F, '{
+  if ($2 != "") {
+    print $2
+  } else {
+    print $1
+  }
+}' /home/linus/scripts/directories.csv | dmenu-mac -i -l 5 -p $(pwd)| while read selection; do
+  if [ -z "$selection" ]; then
+    exit 0
+  fi
+  awk -F, -v sel="$selection" '
+    $2 == sel { print $1; found=1 }
+    $2 == "" && $1 == sel { print $1; found=1 }
+    END { if (!found) exit 1 }
+    ' /home/linus/scripts/directories.csv | while read dir; do
+    cd "$dir" >/dev/null 2>&1 &
+  done
+done
+

@@ -1,0 +1,35 @@
+#!/bin/bash 
+
+awk -F, '{
+  if ($1 ~ /^nmcli/) {
+    # custom command + description
+    print $2
+  } else {
+    # regular SSID
+    print $1
+  }
+}' $HOME/scripts/wifi.csv | dmenu -i | while read selection; do
+  if [ -z "$selection" ]; then
+    exit 0
+  fi
+
+  # search for the selection
+  awk -F, -v sel="$selection" '
+  {
+    if ($1 ~ /^nmcli/ && $2 == sel) {
+	  # custom command + description
+      cmd = $1
+      found = 1
+    } else if ($1 == sel) {
+      cmd = sprintf("nmcli device wifi connect \"%s\" password \"%s\"", $1, $2)
+      found = 1
+    }
+  }
+  END {
+    if (found) {
+      print cmd
+    }
+  }' $HOME/scripts/wifi.csv | while read cmd; do
+    eval "$cmd"
+  done
+done
