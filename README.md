@@ -2,7 +2,6 @@
 
 ## Inhalt
 
-- `.bashrc`
 - `.bash_profile`
 - `.vimrc`
 - `.zshenv`
@@ -14,5 +13,12 @@
 ## Initialisierung
 
 ```bash
-bash init.bash
+cp -r $HOME/dotfiles/.vim ./
+cp -r $HOME/dotfiles/.config ./
+cp -r $HOME/dotfiles/.sources ./
+cp -r $HOME/dotfiles/.scripts ./
+
+ln $HOME/dotfiles/.bash_profile ./
+ln $HOME/dotfiles/.vimrc ./
 ```
+
