@@ -53,6 +53,7 @@ alias n='nvim'
 alias v='vim'
 alias y='yazi'
 alias ne='neofetch'
+alias t="taskell"
 
 ########## PATH ##########
 
