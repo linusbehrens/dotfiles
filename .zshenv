@@ -6,3 +6,4 @@ export LESSHISTFILE="$HOME/.config/less/history"
 
 # mv ~/.gitconfig ~/.config/git/config
 
+. "$HOME/.cargo/env"

@@ -1,3 +1,4 @@
+-- $HOME/.config/nvim/lua/linus/plugins/zen-mode.lua
 return {
   "folke/zen-mode.nvim",
   opts = {
@@ -48,3 +49,5 @@ return {
     on_close = function() end,
   },
 }
+-- keymaps
+-- $HOME/.config/nvim/lua/linus/keys.lua

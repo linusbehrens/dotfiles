@@ -1,24 +1,44 @@
+-- lua/plugins/neo-tree.lua
+-- $HOME/.config/nvim/lua/linus/plugins/neotree.lua
 return {
-  "nvim-neo-tree/neo-tree.nvim",
-  opts = {
-    filesystem = {
-      hijack_netrw_behavior = "open_current", -- Keeps Neo-tree from opening automatically
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    cmd = "Neotree",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",  -- file icons
+      "MunifTanjim/nui.nvim",
+    },
+    opts = {
+      filesystem = {
+        follow_current_file = true,  -- sync tree with open file
+        use_libuv_file_watcher = true,
+      },
       window = {
         position = "float",
-        width = 30,
+        width = 40,
+      },
+      default_component_configs = {
+        icon = {
+          folder_closed = "",
+          folder_open = "",
+          folder_empty = "",
+        },
+        modified = { symbol = "●" },
+        git_status = {
+          symbols = {
+            added    = "+",  -- new file
+            modified = "~",  -- modified file
+            deleted  = "✖",  -- deleted file
+            renamed  = "➜",
+            unstaged = "★",
+          },
+        },
       },
     },
-    event_handlers = {
-      {
-        event = "file_opened",
-        handler = function()
-          require("neo-tree.command").execute({ action = "close" })
-        end,
-      },
-    },
-  },
-  keys = {
-    { "<leader>e", "<cmd>Neotree toggle float<cr>", desc = "Toggle File Explorer (Float)" },
-    { "<leader>E", "<cmd>Neotree focus float<cr>", desc = "Focus File Explorer" },
   },
 }
+
+-- keympas
+-- $HOME/.config/nvim/lua/linus/keys.lua
