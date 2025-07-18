@@ -2,7 +2,6 @@
 
 alias cn='cd $HOME/.config/nvim/'
 alias ct='cd $HOME/.config/tmux/'
-alias cm='cd /Users/linus/school/mathematik/müprü/'
 
 ########## SETUP ##########
 
@@ -40,6 +39,7 @@ alias gclgh='git clone https://github.com/'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias gl="git --no-pager log --oneline --decorate --graph --parents"
 
 alias ghoco="nvim $HOME/.config/ghostty/config"
 
@@ -53,17 +53,21 @@ alias n='nvim'
 alias v='vim'
 alias y='yazi'
 alias ne='neofetch'
-alias t="taskell"
 
 ########## PATH ##########
 
 export GPG_TTY=$(tty)
 export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/home/linus/.cargo/bin"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/code/scripts/menu:$PATH"
+export PATH="$HOME/code/scripts:$PATH"
 export PLAN9=/Users/linus/.sources/plan9port
 export PATH=$PATH:$PLAN9/bin
 export XDG_CONFIG_HOME="$HOME/.config"
 export MANPAGER='nvim +Man!'
 
+
 ########## PS1 ##########
 
+export EDITOR=vim

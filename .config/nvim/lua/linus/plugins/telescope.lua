@@ -1,6 +1,6 @@
 -- lua/plugins/telescope.lua
 return {
-  {
+  
     "nvim-telescope/telescope.nvim",
     version = "*",
     cmd = "Telescope",
@@ -9,8 +9,8 @@ return {
       defaults = {
         mappings = {
           i = {
-            ["<C-j>"] = require("telescope.actions").move_selection_next,
-            ["<C-k>"] = require("telescope.actions").move_selection_previous,
+            -- ["<C-j>"] = require("telescope.actions").move_selection_next,
+            -- ["<C-k>"] = require("telescope.actions").move_selection_previous,
           },
         },
       },
@@ -23,5 +23,4 @@ return {
       { "<leader>ft", "<cmd>Telescope grep_string search=TODO<cr>", desc = "Find TODO/FIXME" },
     {"<leader><space>", "<cmd>Telescope find_files<cr>", { desc = "Find Files" }}
     },
-  },
 }

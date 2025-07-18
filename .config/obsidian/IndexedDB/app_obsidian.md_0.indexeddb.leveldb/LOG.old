@@ -1,0 +1,15 @@
+2025/07/11-15:41:24.207 6452 Reusing MANIFEST /home/linus/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/11-15:41:24.208 6452 Recovering log #4
+2025/07/11-15:41:24.221 6452 Reusing old log /home/linus/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000004.log 
+2025/07/11-15:41:27.024 6462 Level-0 table #8: started
+2025/07/11-15:41:27.061 6462 Level-0 table #8: 1625134 bytes OK
+2025/07/11-15:41:27.063 6462 Delete type=0 #4
+2025/07/11-15:41:27.122 6451 Compacting 1@1 + 1@2 files
+2025/07/11-15:41:27.157 6451 Generated table #9@1: 5373 keys, 978339 bytes
+2025/07/11-15:41:27.157 6451 Compacted 1@1 + 1@2 files => 978339 bytes
+2025/07/11-15:41:27.158 6451 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/11-15:41:27.158 6451 Delete type=2 #8
+2025/07/11-15:41:27.159 6451 Delete type=2 #5
+2025/07/11-15:41:32.187 6462 Level-0 table #11: started
+2025/07/11-15:41:32.216 6462 Level-0 table #11: 1155326 bytes OK
+2025/07/11-15:41:32.218 6462 Delete type=0 #7
