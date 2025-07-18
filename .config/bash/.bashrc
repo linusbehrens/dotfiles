@@ -1,20 +1,14 @@
 ########## WORKSPACE ##########
 
-alias cn='cd $HOME/.config/nvim/'
-alias ct='cd $HOME/.config/tmux/'
-
 ########## SETUP ##########
 
 set completion-ignore-case on
-# bindkey -v
-set -o vi
+# bindkey -v # zsh
+set -o vi # bash
 
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 bind "set mark-symlinked-directories on"
-
-PS1="\n\u@\h: \w \$ "
-# PS1='\[\e[34m\]\u \[\e[31m\]\w \$\[\e[0m\] '
 
 ########## ALIAS ##########
 
@@ -41,6 +35,8 @@ alias gc='git commit -m'
 alias gp='git push'
 alias gl="git --no-pager log --oneline --decorate --graph --parents"
 
+alias tu="tmux attach"
+
 alias ghoco="nvim $HOME/.config/ghostty/config"
 
 alias bashrc='nvim $HOME/.config/bash/.bashrc'
@@ -56,7 +52,6 @@ alias ne='neofetch'
 
 ########## PATH ##########
 
-export GPG_TTY=$(tty)
 export PATH="$PATH:/opt/homebrew/bin"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -64,9 +59,13 @@ export PATH="$HOME/code/scripts/menu:$PATH"
 export PATH="$HOME/code/scripts:$PATH"
 export PLAN9=/Users/linus/.sources/plan9port
 export PATH=$PATH:$PLAN9/bin
+
+export GPG_TTY=$(tty)
 export XDG_CONFIG_HOME="$HOME/.config"
 export MANPAGER='nvim +Man!'
+export EDITOR=vim
 
 ########## PS1 ##########
 
-export EDITOR=vim
+PS1="\n\u@\h: \w \$ "
+# PS1='\[\e[34m\]\u \[\e[31m\]\w \$\[\e[0m\] '

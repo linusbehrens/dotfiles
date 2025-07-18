@@ -6,16 +6,15 @@ return {
     cmd = "Telescope",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
-      defaults = {
-        mappings = {
-          i = {
-            -- ["<C-j>"] = require("telescope.actions").move_selection_next,
-            -- ["<C-k>"] = require("telescope.actions").move_selection_previous,
-          },
+        defaults = {
+            mappings = {
+                i = {
+                    -- ["<C-j>"] = require("telescope.actions").move_selection_next,
+                    -- ["<C-k>"] = require("telescope.actions").move_selection_previous,
+                },
+            },
         },
-      },
     },
-  },
 }
 
 -- keymaps:
