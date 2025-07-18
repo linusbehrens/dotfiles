@@ -1,9 +1,0 @@
--- -- ~/.config/nvim/lua/config/highlights.lua
--- return {
---   -- Beispiel: Tree-sitter Textfarben dimmen
---   ["@text"] = { fg = "#000000" }, -- normaler Text
---   ["@text.strong"] = { fg = "#000000", bold = true },
---   ["@text.emphasis"] = { fg = "#000000", italic = true },
---   ["@text.literal"] = { fg = "#444444" }, -- inline code
---   ["@comment"] = { fg = "#555555", italic = true }, -- Kommentare dunkler machen
--- }

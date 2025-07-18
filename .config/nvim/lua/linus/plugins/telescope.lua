@@ -1,6 +1,6 @@
 -- $HOME/.config/nvim/lua/linus/plugins/telescope.lua
 return {
-  {
+  
     "nvim-telescope/telescope.nvim",
     version = "*",
     cmd = "Telescope",
@@ -9,8 +9,8 @@ return {
       defaults = {
         mappings = {
           i = {
-            ["<C-j>"] = require("telescope.actions").move_selection_next,
-            ["<C-k>"] = require("telescope.actions").move_selection_previous,
+            -- ["<C-j>"] = require("telescope.actions").move_selection_next,
+            -- ["<C-k>"] = require("telescope.actions").move_selection_previous,
           },
         },
       },

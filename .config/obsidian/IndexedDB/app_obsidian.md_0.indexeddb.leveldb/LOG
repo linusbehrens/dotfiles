@@ -1,0 +1,25 @@
+2025/07/11-21:26:42.887 107e Reusing MANIFEST /home/linus/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/11-21:26:42.888 107e Recovering log #10
+2025/07/11-21:26:42.908 107e Reusing old log /home/linus/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000010.log 
+2025/07/11-21:26:43.571 107e Compacting 1@1 + 1@2 files
+2025/07/11-21:26:43.631 107e Generated table #13@1: 7315 keys, 1717168 bytes
+2025/07/11-21:26:43.631 107e Compacted 1@1 + 1@2 files => 1717168 bytes
+2025/07/11-21:26:43.632 107e compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/11-21:26:43.632 107e Delete type=2 #11
+2025/07/11-21:26:43.632 107e Delete type=2 #9
+2025/07/11-21:26:47.352 107d Level-0 table #15: started
+2025/07/11-21:26:47.378 107d Level-0 table #15: 1094230 bytes OK
+2025/07/11-21:26:47.380 107d Delete type=0 #10
+2025/07/11-21:26:47.426 1090 Compacting 1@1 + 1@2 files
+2025/07/11-21:26:47.488 1090 Generated table #16@1: 8408 keys, 2116773 bytes
+2025/07/11-21:26:47.488 1090 Compacted 1@1 + 1@2 files => 2116773 bytes
+2025/07/11-21:26:47.489 1090 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/07/11-21:26:48.257 107e Level-0 table #18: started
+2025/07/11-21:26:48.279 107e Level-0 table #18: 1028467 bytes OK
+2025/07/11-21:26:48.282 107e Delete type=2 #15
+2025/07/11-21:26:48.282 107e Delete type=2 #13
+2025/07/11-21:26:48.282 107e Delete type=0 #14
+2025/07/11-21:26:48.382 107d Compacting 1@1 + 1@2 files
+2025/07/11-21:26:48.452 107d Generated table #19@1: 8404 keys, 2116961 bytes
+2025/07/11-21:26:48.452 107d Compacted 1@1 + 1@2 files => 2116961 bytes
+2025/07/11-21:26:48.453 107d compacted to: files[ 0 0 1 0 0 0 0 ]
