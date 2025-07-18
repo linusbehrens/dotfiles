@@ -1,3 +1,5 @@
+-- Snippet loader
+-- https://github.com/L3MON4D3/LuaSnip
 return {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
@@ -10,9 +12,6 @@ return {
         --     ls.setup({ enable_autosnippets = false })
         -- end, { silent = false })
         -- vim.keymap.set({ "i" }, "<Tab>", function() ls.expand() end, { silent = true })
-        vim.keymap.set({ "i" }, "<C-e>", function() ls.expand() end, { silent = true})
-        vim.keymap.set({ "i", "s" }, "<C-J>", function() ls.jump(1) end, { silent = true })
-        vim.keymap.set({ "i", "s" }, "<C-K>", function() ls.jump(-1) end, { silent = true })
 
 
         ls.config.setup({
@@ -22,3 +21,9 @@ return {
         })
     end
 }
+
+-- keymaps:
+-- $HOME/.config/nvim/lua/linus/keys.lua
+
+-- snippets:
+-- $HOME/.config/nvim/lua/linus/snippets
