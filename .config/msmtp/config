@@ -1,0 +1,14 @@
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.local/share/msmtp.log
+
+account mail@linus-behrens.de
+host           smtp.strato.de
+port           465
+from           mail@linus-behrens.de
+user           mail@linus-behrens.de
+passwordeval   "pass show email/mail@linus-behrens.de"
+
+account default : mail@linus-behrens.de

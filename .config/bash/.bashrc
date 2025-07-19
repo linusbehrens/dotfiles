@@ -64,6 +64,8 @@ export GPG_TTY=$(tty)
 export XDG_CONFIG_HOME="$HOME/.config"
 export MANPAGER='nvim +Man!'
 export EDITOR=vim
+export MAIL="/home/linus/Mail/mail@linus-behrens.de/"
+# export ISYNCRC="$HOME/Mail/mail@linus-behrens.de/.mbsyncrc"
 
 ########## PS1 ##########
 

@@ -1,0 +1,24 @@
+IMAPAccount mail@linus-behrens.de
+Host        imap.strato.de
+Port        993
+User        mail@linus-behrens.de
+PassCmd     "pass show email/mail@linus-behrens.de"
+TLSType     IMAPS
+AuthMechs   LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore   strato-remote
+Account     mail@linus-behrens.de
+
+MaildirStore strato-local
+Path         ~/Mail/mail@linus-behrens.de/
+Inbox        ~/Mail/mail@linus-behrens.de/
+SubFolders   Verbatim
+
+Channel strato
+Far   :strato-remote:
+Near  :strato-local:
+Create      Both
+SyncState   *
+Expunge     Both
+Patterns    *

@@ -1,0 +1,5 @@
+from: Linus Behrens <mail@linus-behrens.de>
+sendmail: /usr/bin/msmtp
+auto-from: -f           # let msmtp pick the right account
+editor: nvim            # or $EDITOR of choice
+pager:  less -R
