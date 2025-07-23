@@ -29,7 +29,7 @@ return {
                 "pyright",
                 "clangd",
                 -- "rust-analyzer",
-                "tsserver"
+                -- "tsserver"
             }
             for _, server in ipairs(servers) do
                 lspconfig[server].setup({})

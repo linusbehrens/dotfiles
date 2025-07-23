@@ -2,7 +2,7 @@ cursor-style = block
 cursor-style-blink = false
 
 theme = "3024 Night"
-background = #000000
+# background = #000000
 
 macos-titlebar-style = transparent
 macos-titlebar-proxy-icon = hidden
