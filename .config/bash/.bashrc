@@ -66,9 +66,8 @@ export MANPAGER='nvim +Man!'
 export EDITOR=vim
 export MAIL="$HOME/Mail/mail@linus-behrens.de/"
 export TERMINAL="ghostty"
-# export ISYNCRC="$HOME/Mail/mail@linus-behrens.de/.mbsyncrc"
 
 ########## PS1 ##########
 
-PS1="\n\u@\h: \w \$ "
-# PS1='\[\e[34m\]\u \[\e[31m\]\w \$\[\e[0m\] '
+PS1="\n\u@\h: \w \$ " # bash
+# PS1='\[\e[34m\]\u \[\e[31m\]\w \$\[\e[0m\] ' # zsh
